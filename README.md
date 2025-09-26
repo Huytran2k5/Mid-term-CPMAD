@@ -26,7 +26,7 @@ Milk Tea Order App allows users to register, log in, select their favorite milk 
 ### 2. Clone the project source code
 - Open terminal/cmd and run:
 	```bash
-	git clone <repo-url>
+	git clone <https://github.com/Huytran2k5/Mid-term-CPMAD.git>
 	cd <project-folder>
 	```
 
