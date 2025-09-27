@@ -26,7 +26,7 @@ Milk Tea Order App allows users to register, log in, select their favorite milk 
 ### 2. Clone the project source code
 - Open terminal/cmd and run:
 	```bash
-	git clone <https://github.com/Huytran2k5/Mid-term-CPMAD.git>
+	git clone https://github.com/Huytran2k5/Mid-term-CPMAD.git
 	cd <project-folder>
 	```
 
@@ -40,7 +40,7 @@ Milk Tea Order App allows users to register, log in, select their favorite milk 
 ### 4. Set up Firebase for Android/iOS
 - Go to [Firebase Console](https://console.firebase.google.com/) and create a new project.
 - Add Android app:
-	- Get the package name from `android/app/src/main/AndroidManifest.xml`.
+	- Get the package name from `android/app/src/main/build.gradle.kts`.
 	- Download `google-services.json` and place it in `android/app/`.
 - Add iOS app:
 	- Get the bundle identifier from `ios/Runner.xcodeproj`.
