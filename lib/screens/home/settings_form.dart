@@ -26,7 +26,7 @@ class _SettingsFormState extends State<SettingsForm> {
   // form values
   String? _currentName;
   String? _currentMilkTeaType;
-  List<String> _currentToppings = [];
+  final List<String> _currentToppings = [];
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +59,7 @@ class _SettingsFormState extends State<SettingsForm> {
                     decoration: textInputDecoration.copyWith(
                       labelText: 'Type of Milk Tea',
                     ),
-                    value: _currentMilkTeaType ?? userData.milkTeaType,
+                    initialValue: _currentMilkTeaType ?? userData.milkTeaType,
                     items: milkTeaTypes.map((type) {
                       return DropdownMenuItem(value: type, child: Text(type));
                     }).toList(),
@@ -77,7 +77,7 @@ class _SettingsFormState extends State<SettingsForm> {
                       ),
                     ),
                   ),
-                  Container(
+                  SizedBox(
                     height: 100,
                     child: ListView(
                       shrinkWrap: true,
@@ -119,7 +119,9 @@ class _SettingsFormState extends State<SettingsForm> {
                               ? userData.toppings
                               : _currentToppings,
                         );
-                        Navigator.pop(context);
+                        if (context.mounted) {
+                          Navigator.pop(context);
+                        }
                       }
                     },
                   ),

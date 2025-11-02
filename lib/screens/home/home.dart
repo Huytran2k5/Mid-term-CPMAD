@@ -7,10 +7,11 @@ import 'package:gkdnt/screens/home/user_list.dart';
 import 'package:gkdnt/models/user_model.dart';
 
 class Home extends StatelessWidget {
-  final AuthService _auth = AuthService();
+  const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final AuthService auth = AuthService();
     return StreamProvider<List<UserModel>?>.value(
       value: DatabaseService(uid: '').users,
       initialData: null,
@@ -25,7 +26,7 @@ class Home extends StatelessWidget {
               icon: const Icon(Icons.person),
               label: const Text('logout'),
               onPressed: () async {
-                await _auth.signOut();
+                await auth.signOut();
               },
             ),
             TextButton.icon(
